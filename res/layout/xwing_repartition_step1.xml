@@ -32,11 +32,10 @@
 		android:text="@string/baseline" android:textColor="#FFFFFF"
 		android:layout_gravity="center_horizontal" />
 		
-	<TextView
+	<ListView
 	    android:id="@+id/listBoxes"
 	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content" 
-		android:text="liste"
+	    android:layout_height="wrap_content"
 		android:textColor="#FFFFFF"
 		android:paddingTop="40dp"
 		android:layout_gravity="center_horizontal" />
