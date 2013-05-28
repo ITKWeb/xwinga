@@ -13,17 +13,20 @@
     
 	<ImageView android:layout_width="fill_parent" android:id="@+acountcreation/title" 
 		android:layout_height="wrap_content"
-		android:src="@drawable/logo_xwing" android:layout_marginTop="100dp" />
-	 
+		android:src="@drawable/logo_xwing"
+		android:layout_marginTop="100dp"
+		android:contentDescription="@string/logo_description" />
+	
 	<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" 
-		android:text="Créateur d'escadron d'élite depuis 2013" android:textColor="#FFFFFF"
+		android:text="@string/baseline" android:textColor="#FFFFFF"
 		android:paddingTop="40dp" android:layout_gravity="center_horizontal" />
-		 
-	<Button android:layout_width="wrap_content" android:id="@+acountcreation/connect" 
+	
+	<Button android:layout_width="fill_parent"
+	    android:id="@+acountcreation/connect"
 		android:layout_height="wrap_content"
-		android:text="Générer les équipes" android:layout_marginTop="150dp" 
+		android:text="@string/menu1" android:layout_marginTop="150dp" 
 		android:layout_gravity="center"
-		android:onClick="start_repartition"/>
-
+		android:onClick="start_repartition"
+		android:padding="40dp"/>
 
 </LinearLayout>

@@ -10,34 +10,44 @@
     android:background="@drawable/stars"
     tools:context=".XwingMainActivity" >
 
+	<Button
+	    android:id="@+id/back"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:gravity="top|left"
+	    android:onClick=""
+	    android:paddingLeft="30dp"
+	    android:paddingRight="30dp"
+	    android:paddingTop="10dp"
+	    android:paddingBottom="10dp"
+	    android:text="@string/back" />
     
 	<ImageView android:layout_width="fill_parent" android:id="@+acountcreation/title" 
 		android:layout_height="wrap_content"
-		android:src="@drawable/logo_xwing" android:layout_marginTop="100dp" />
+		android:src="@drawable/logo_xwing_small"
+		android:contentDescription="@string/logo_description" />
 	 
 	<TextView
-	    android:id="@+id/listBoxes"
 	    android:layout_width="wrap_content" android:layout_height="wrap_content" 
-		android:text="Créateur d'escadron d'élite depuis 2013" android:textColor="#FFFFFF"
-		android:paddingTop="40dp" android:layout_gravity="center_horizontal" />
+		android:text="@string/baseline" android:textColor="#FFFFFF"
+		android:layout_gravity="center_horizontal" />
 		
-	<RelativeLayout
-		android:layout_width="fill_parent"
-		android:layout_height="fill_parent"
-		android:layout_marginTop="150dp" >
-		
-		<Button android:layout_width="wrap_content"
-		  	android:layout_height="wrap_content"
-			android:text="next"
-			android:layout_gravity="center"
-			android:onClick=""/>
-		
-		<Button android:layout_width="wrap_content"
-		  	android:layout_height="wrap_content"
-			android:text="next"
-			android:layout_gravity="center"
-			android:onClick=""/>
-		
-	</RelativeLayout>
+	<TextView
+	    android:id="@+id/listBoxes"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content" 
+		android:text="liste"
+		android:textColor="#FFFFFF"
+		android:paddingTop="40dp"
+		android:layout_gravity="center_horizontal" />
+	
+	<Button 
+	    android:id="@+id/next"
+	    android:layout_width="fill_parent"
+	  	android:layout_height="wrap_content"
+		android:text="@string/next"
+		android:onClick=""
+		android:padding="40dp" />
+	
 
 </LinearLayout>
