@@ -39,7 +39,7 @@
                 android:value="com.itkweb.xwinga.XwingMainActivity" />
         </activity>
         <activity
-            android:name="com.itkweb.xwinga.XWingRepartitionActivityStep1"
+            android:name="com.itkweb.xwinga.XWingRepartitionStep1"
             android:label="@string/title_activity_xwing_repartition_activity_step1"
             android:parentActivityName="com.itkweb.xwinga.XwingMainActivity" >
             <meta-data
