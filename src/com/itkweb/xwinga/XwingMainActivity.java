@@ -6,12 +6,20 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.media.MediaPlayer;
+
 
 public class XwingMainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        
+        // public static MediaPlayer create (Context context, int resid)
+        MediaPlayer music = MediaPlayer.create(this, R.raw.imperialmarch);
+        music.setVolume(100, 100);
+        music.start();
+        
         setContentView(R.layout.xwing_main_activity);
     }
 
