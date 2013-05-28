@@ -3,6 +3,7 @@ package com.itkweb.xwinga;
 import java.util.List;
 
 import android.app.Activity;
+<<<<<<< HEAD
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.view.Menu;
@@ -12,6 +13,13 @@ import android.widget.ListView;
 
 import com.itkweb.xwinga.db.XWingDb;
 import com.itkweb.xwinga.model.Box;
+=======
+import android.content.Intent;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.support.v4.app.NavUtils;
+>>>>>>> 9318e6297fdc3491803408d7410e4bd3822b8a2a
 
 public class XWingRepartitionStep1 extends Activity {
 	
@@ -67,5 +75,11 @@ public class XWingRepartitionStep1 extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
+	
+	
+	public void backMainMenu(View view) {
+    	Intent intent = new Intent(this, XwingMainActivity.class);
+        startActivity(intent);
+    }
 
 }
