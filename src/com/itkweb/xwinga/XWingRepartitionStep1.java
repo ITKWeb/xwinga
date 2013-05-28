@@ -7,8 +7,10 @@ import com.itkweb.xwinga.model.Box;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.support.v4.app.NavUtils;
 
 public class XWingRepartitionStep1 extends Activity {
@@ -59,5 +61,11 @@ public class XWingRepartitionStep1 extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
+	
+	
+	public void backMainMenu(View view) {
+    	Intent intent = new Intent(this, XwingMainActivity.class);
+        startActivity(intent);
+    }
 
 }
