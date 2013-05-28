@@ -48,5 +48,7 @@ public class XWingRepartitionStep2 extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
+	
+	
 
 }
