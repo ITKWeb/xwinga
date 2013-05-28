@@ -1,27 +1,17 @@
 package com.itkweb.xwinga;
 
-import java.util.Set;
-
-import com.itkweb.xwinga.db.XWingDb;
-import com.itkweb.xwinga.model.Box;
-
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v4.app.NavUtils;
 
-public class XWingRepartitionStep1 extends Activity {
+public class XWingRepartitionStep2 extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.xwing_repartition_step1);
-		
-		//Cr�ation d'une instance de ma classe LivresBDD
-        XWingDb boxesBdd = new XWingDb(this);
-        Set<Box> boxes = boxesBdd.getAllBoxes();
-        
+		setContentView(R.layout.xwing_repartition_step2);
 		// Show the Up button in the action bar.
 		setupActionBar();
 	}
@@ -38,8 +28,7 @@ public class XWingRepartitionStep1 extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater()
-				.inflate(R.menu.xwing_repartition_step1, menu);
+		getMenuInflater().inflate(R.menu.xwing_repartition_step2, menu);
 		return true;
 	}
 

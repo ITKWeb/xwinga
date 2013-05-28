@@ -46,6 +46,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.itkweb.xwinga.XwingMainActivity" />
         </activity>
+        <activity
+            android:name="com.itkweb.xwinga.XWingRepartitionStep2"
+            android:label="@string/title_activity_xwing_repartition_step2"
+            android:parentActivityName="com.itkweb.xwinga.XWingRepartitionStep1" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.itkweb.xwinga.XWingRepartitionStep1" />
+        </activity>
     </application>
 
 </manifest>
