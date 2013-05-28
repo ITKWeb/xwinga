@@ -9,10 +9,10 @@ public class XWingDbTables extends SQLiteOpenHelper {
 
 	private static final int DATABASE_VERSION = 2;
 
-	private static final String TABLE_BOX = "box";
-	private static final String COL_ID = "ID";
-	private static final String COL_NAME = "Name";
-	private static final String COL_PICTURE = "Picture";
+	public static final String TABLE_BOX = "box";
+	public static final String COL_ID = "ID";
+	public static final String COL_NAME = "Name";
+	public static final String COL_PICTURE = "Picture";
 
 	private static final String CREATE_BDD = "CREATE TABLE " + TABLE_BOX + " ("
 			+ COL_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COL_NAME
