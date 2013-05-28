@@ -22,6 +22,30 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.itkweb.xwinga.RepartitionActivity"
+            android:label="@string/title_activity_repartition"
+            android:parentActivityName="com.itkweb.xwinga.XwingMainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.itkweb.xwinga.XwingMainActivity" />
+        </activity>
+        <activity
+            android:name="com.itkweb.xwinga.XwingRepartitionActivity"
+            android:label="@string/title_activity_xwing_repartition"
+            android:parentActivityName="com.itkweb.xwinga.XwingMainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.itkweb.xwinga.XwingMainActivity" />
+        </activity>
+        <activity
+            android:name="com.itkweb.xwinga.XWingRepartitionActivityStep1"
+            android:label="@string/title_activity_xwing_repartition_activity_step1"
+            android:parentActivityName="com.itkweb.xwinga.XwingMainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.itkweb.xwinga.XwingMainActivity" />
+        </activity>
     </application>
 
 </manifest>
