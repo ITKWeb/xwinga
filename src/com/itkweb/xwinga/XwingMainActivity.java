@@ -27,6 +27,8 @@ public class XwingMainActivity extends Activity {
     	
     	Intent intent = new Intent(this, XWingRepartitionStep1.class);
         startActivity(intent);
+        
+        
     }
     
 }

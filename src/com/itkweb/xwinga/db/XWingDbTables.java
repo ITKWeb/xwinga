@@ -1,5 +1,7 @@
 package com.itkweb.xwinga.db;
 
+import com.itkweb.xwinga.model.Box.BoxSet;
+
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -7,7 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class XWingDbTables extends SQLiteOpenHelper {
 
-	private static final int DATABASE_VERSION = 2;
+	private static final int DATABASE_VERSION = 3;
 
 	public static final String TABLE_BOX = "box";
 	public static final String COL_ID = "ID";
@@ -21,7 +23,6 @@ public class XWingDbTables extends SQLiteOpenHelper {
 
 	public XWingDbTables(Context context) {
 		super(context, TABLE_BOX, null, DATABASE_VERSION);
-		init();
 	}
 
 	@Override
@@ -29,6 +30,7 @@ public class XWingDbTables extends SQLiteOpenHelper {
 		// on cr�e la table � partir de la requ�te �crite dans la variable
 		// CREATE_BDD
 		db.execSQL(CREATE_BDD);
+		init();
 	}
 
 	@Override
@@ -42,6 +44,7 @@ public class XWingDbTables extends SQLiteOpenHelper {
 
 	public void init() {
 		SQLiteDatabase db = getWritableDatabase();
+		
 		// Cr�ation d'un ContentValues (fonctionne comme une HashMap)
 		ContentValues values = new ContentValues();
 		// on lui ajoute une valeur associ� � une cl� (qui est le nom de la
@@ -58,27 +61,6 @@ public class XWingDbTables extends SQLiteOpenHelper {
 		db.close();
 	}
 
-	public enum BoxSet {
-	    b1 ("Bo�te de base","sw01.png"),
-	    b2 ("X-wing","sw02.png"),
-	    b3 ("Chasseur TIE","sw03.png"),
-	    b4 ("Y-wing","sw04.png"),
-	    b5 ("TIE advanced","sw05.png"),
-	    b6 ("Faucon Millenium","sw06.png"),
-	    b7 ("Slave 1","sw07.png"),
-	    b8 ("A-wing","sw08.png"),
-	    b9 ("Intercepteur TIE","sw09.png");
-
-	    private final String name;  
-	    private final String  picture; 
-	    BoxSet(String name, String picture) {
-	        this.name = name;
-	        this.picture = picture;
-	    }
-	    public String getName() { return name; }
-	    public String getPicture() { return picture; }
-
-	}
 	
 	
 }
