@@ -1,7 +1,7 @@
 package com.itkweb.xwinga.db;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -15,17 +15,17 @@ public class XWingDb {
 	private SQLiteDatabase readableDb;
 
 	public XWingDb(Context context) {
-		// On créer la BDD et sa table
+		// On crï¿½er la BDD et sa table
 		xwingDb = new XWingDbTables(context);
 	}
 
 	public void open() {
-		// on ouvre la BDD en écriture
+		// on ouvre la BDD en ï¿½criture
 		readableDb = xwingDb.getReadableDatabase();
 	}
 
 	public void close() {
-		// on ferme l'accès à la BDD
+		// on ferme l'accï¿½s ï¿½ la BDD
 		readableDb.close();
 	}
 
@@ -33,19 +33,19 @@ public class XWingDb {
 		return readableDb;
 	}
 
-	public Set<Box> getAllBoxes() {
+	public List<Box> getAllBoxes() {
 
-		Set<Box> resultBoxList = new HashSet<Box>();
+		List<Box> resultBoxList = new ArrayList<Box>();
 		
 		open();
 		
 		Cursor c = readableDb.query(XWingDbTables.TABLE_BOX, new String[] {XWingDbTables.COL_ID, XWingDbTables.COL_NAME, XWingDbTables.COL_PICTURE}, "", null, null, null, null);
 
-		//si aucun élément n'a été retourné dans la requête, on renvoie null
+		//si aucun ï¿½lï¿½ment n'a ï¿½tï¿½ retournï¿½ dans la requï¿½te, on renvoie null
 		if (c.getCount() == 0)
 			return null;
  
-		//Sinon on se place sur le premier élément
+		//Sinon on se place sur le premier ï¿½lï¿½ment
 		if(c.moveToFirst()) {
 			do {
 				Box box = new Box();

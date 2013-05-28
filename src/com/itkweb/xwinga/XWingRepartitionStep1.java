@@ -1,13 +1,17 @@
 package com.itkweb.xwinga;
 
-import java.util.Set;
+import java.util.List;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import com.itkweb.xwinga.db.XWingDb;
 import com.itkweb.xwinga.model.Box;
@@ -21,16 +25,22 @@ public class XWingRepartitionStep1 extends Activity {
 
 		// Cr�ation d'une instance de ma classe LivresBDD
 		XWingDb boxesBdd = new XWingDb(this);
-		Set<Box> boxes = boxesBdd.getAllBoxes();
+		List<Box> boxes = boxesBdd.getAllBoxes();
 
-		for (Box box : boxes) {
-			int imageResource = getResources().getIdentifier(box.getPicture(),
-					"drawable", getPackageName());
+//		for (Box box : boxes) {
+//			int imageResource = getResources().getIdentifier(box.getPicture(),
+//					"drawable", getPackageName());
+//
+//			Drawable image = getResources().getDrawable(imageResource);
+//
+//			image.getBounds();
+//		}
+		ListView listView1 = (ListView) findViewById(R.id.listBoxes);
 
-			Drawable image = getResources().getDrawable(imageResource);
+		ArrayAdapter<Box> adapter = new ArrayAdapter<Box>(this,
+				android.R.layout.simple_list_item_1, boxes);
 
-			image.getBounds();
-		}
+		listView1.setAdapter(adapter);
 
 		// Show the Up button in the action bar.
 		setupActionBar();
@@ -68,6 +78,16 @@ public class XWingRepartitionStep1 extends Activity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+
+	public void backMainMenu(View view) {
+		Intent intent = new Intent(this, XwingMainActivity.class);
+		startActivity(intent);
+	}
+
+	public void toBeContinued(View view) {
+		Intent intent = new Intent(this, XWingRepartitionStep2.class);
+		startActivity(intent);
 	}
 
 }
