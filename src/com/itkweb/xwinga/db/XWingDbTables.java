@@ -16,7 +16,7 @@ public class XWingDbTables extends SQLiteOpenHelper {
 
 	private static final String CREATE_BDD = "CREATE TABLE " + TABLE_BOX + " ("
 			+ COL_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COL_NAME
-			+ " TEXT NOT NULL "+ COL_PICTURE
+			+ " TEXT NOT NULL, "+ COL_PICTURE
 			+ " TEXT NOT NULL);";
 
 	public XWingDbTables(Context context) {

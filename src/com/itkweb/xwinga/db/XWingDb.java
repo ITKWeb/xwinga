@@ -36,6 +36,9 @@ public class XWingDb {
 	public Set<Box> getAllBoxes() {
 
 		Set<Box> resultBoxList = new HashSet<Box>();
+		
+		open();
+		
 		Cursor c = readableDb.query(XWingDbTables.TABLE_BOX, new String[] {XWingDbTables.COL_ID, XWingDbTables.COL_NAME, XWingDbTables.COL_PICTURE}, "", null, null, null, null);
 
 		//si aucun élément n'a été retourné dans la requête, on renvoie null
@@ -57,6 +60,8 @@ public class XWingDb {
 		//On ferme le cursor
 		c.close();
  
+		close();
+		
 		//On retourne le livre
 		return resultBoxList;
 	}
