@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ImageView;
 
 import com.itkweb.xwinga.db.XWingDb;
 import com.itkweb.xwinga.model.Box;
@@ -25,12 +24,11 @@ public class XWingRepartitionStep1 extends Activity {
 		Set<Box> boxes = boxesBdd.getAllBoxes();
 
 		for (Box box : boxes) {
-			int imageResource = getResources().getIdentifier(
-					box.getPicture(), "drawable",
-					getPackageName());
+			int imageResource = getResources().getIdentifier(box.getPicture(),
+					"drawable", getPackageName());
 
 			Drawable image = getResources().getDrawable(imageResource);
-			
+
 			image.getBounds();
 		}
 
