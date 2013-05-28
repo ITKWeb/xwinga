@@ -1,8 +1,6 @@
 package com.itkweb.xwinga;
 
 import java.util.Set;
-import java.util.List; //Ajout test laurent
-import java.util.ArrayList; //Ajout test laurent
 
 import com.itkweb.xwinga.db.XWingDb;
 import com.itkweb.xwinga.model.Box;
@@ -13,11 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v4.app.NavUtils;
 
-import android.widget.ArrayAdapter; //Ajout test laurent
-import android.widget.ListView; //Ajout test laurent
-
 public class XWingRepartitionStep1 extends Activity {
-  ListView liste = null; //Ajout test laurent
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -27,19 +21,7 @@ public class XWingRepartitionStep1 extends Activity {
 		//Cr�ation d'une instance de ma classe LivresBDD
         XWingDb boxesBdd = new XWingDb(this);
         Set<Box> boxes = boxesBdd.getAllBoxes();
-        
-        //test de cr�ation et d'affichage d'un liste
-        liste = (ListView) findViewById(R.id.listBoxes);
-        List<String> exemple = new ArrayList<String>();
-        exemple.add("Item 1");
-        exemple.add("Item 2");
-        exemple.add("Item 3");
-             
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.xwing_repartition_step1, exemple);
-        liste.setAdapter(adapter);
-        //fin du test
-        
-        
+
 		// Show the Up button in the action bar.
 		setupActionBar();
 	}
