@@ -1,15 +1,17 @@
 package com.itkweb.xwinga;
 
-import java.util.Set;
+import java.util.List;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.support.v4.app.NavUtils;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import com.itkweb.xwinga.db.XWingDb;
 import com.itkweb.xwinga.model.Box;
-
-import android.os.Bundle;
-import android.app.Activity;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.support.v4.app.NavUtils;
 
 public class XWingRepartitionStep1 extends Activity {
 	
@@ -17,10 +19,16 @@ public class XWingRepartitionStep1 extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.xwing_repartition_step1);
-		
-		//Cr�ation d'une instance de ma classe LivresBDD
-        XWingDb boxesBdd = new XWingDb(this);
-        Set<Box> boxes = boxesBdd.getAllBoxes();
+
+		ListView listView1 = (ListView) findViewById(R.id.listBoxes);
+
+		// Creation d'une instance de ma classe LivresBDD
+		XWingDb boxesBdd = new XWingDb(this);
+		List<Box> boxes = boxesBdd.getAllBoxes();
+		ArrayAdapter<Box> adapter = new ArrayAdapter<Box>(this,
+				android.R.layout.simple_list_item_1, boxes);
+
+		listView1.setAdapter(adapter);
 
 		// Show the Up button in the action bar.
 		setupActionBar();

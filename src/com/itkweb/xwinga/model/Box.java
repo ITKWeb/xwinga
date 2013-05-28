@@ -33,5 +33,13 @@ public class Box {
 		this.picture = picture;
 	}
 
+	@Override
+	public String toString() {
+		return "Box [name=" + name + ", picture=" + picture + ", id=" + id
+				+ "]";
+	}
+	
+	
+
 	
 }
