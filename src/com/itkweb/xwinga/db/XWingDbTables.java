@@ -59,15 +59,15 @@ public class XWingDbTables extends SQLiteOpenHelper {
 	}
 
 	public enum BoxSet {
-	    b1 ("Bo�te de base","swx01.png"),
-	    b2 ("X-wing","swx02.png"),
-	    b3 ("Chasseur TIE","swx03.png"),
-	    b4 ("Y-wing","swx04.png"),
-	    b5 ("TIE advanced","swx05.png"),
-	    b6 ("Faucon Millenium","swx06.png"),
-	    b7 ("Slave 1","swx07.png"),
-	    b8 ("A-wing","swx08.png"),
-	    b9 ("Intercepteur TIE","swx09.png");
+	    b1 ("Bo�te de base","sw01.png"),
+	    b2 ("X-wing","sw02.png"),
+	    b3 ("Chasseur TIE","sw03.png"),
+	    b4 ("Y-wing","sw04.png"),
+	    b5 ("TIE advanced","sw05.png"),
+	    b6 ("Faucon Millenium","sw06.png"),
+	    b7 ("Slave 1","sw07.png"),
+	    b8 ("A-wing","sw08.png"),
+	    b9 ("Intercepteur TIE","sw09.png");
 
 	    private final String name;  
 	    private final String  picture; 
