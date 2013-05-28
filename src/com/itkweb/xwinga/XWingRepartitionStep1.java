@@ -27,14 +27,15 @@ public class XWingRepartitionStep1 extends Activity {
 		XWingDb boxesBdd = new XWingDb(this);
 		List<Box> boxes = boxesBdd.getAllBoxes();
 
-//		for (Box box : boxes) {
-//			int imageResource = getResources().getIdentifier(box.getPicture(),
-//					"drawable", getPackageName());
-//
-//			Drawable image = getResources().getDrawable(imageResource);
-//
-//			image.getBounds();
-//		}
+		for (Box box : boxes) {
+			int imageResource = getResources().getIdentifier(box.getPicture(),
+					"drawable", getPackageName());
+
+			Drawable image = getResources().getDrawable(imageResource);
+
+			image.getBounds();
+		}
+		
 		ListView listView1 = (ListView) findViewById(R.id.listBoxes);
 
 		ArrayAdapter<Box> adapter = new ArrayAdapter<Box>(this,
